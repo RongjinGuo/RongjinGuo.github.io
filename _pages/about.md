@@ -20,7 +20,20 @@ South China University of Technology, Guangzhou, China <br>
 B.E. in Computer Science, 2021~2025 (expected) <br>
 GPA: 3.96/4.0 (Rank: 1/25, top 4%) <br>
 
-
+<div align="center">
+<table rules="none">
+<tr>
+<td>
+<p>文字</p>
+<p>文字</p>
+<p>文字</p>
+</td>
+<td>
+<img src="images/校徽.jpg" style="zoom:50%"  alt="scut"/>
+</td>
+</tr>
+</table>    
+</div>
 News and Updates
 ======
 
