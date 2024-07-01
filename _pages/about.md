@@ -16,9 +16,9 @@ You can find my CV here: [XX's Curriculum Vitae](../assets/Curriculum_Vitae.pdf)
 
 Education
 =====
-South China University of Technology, Guangzhou, China
-B.E. in Computer Science, 2021~2025 (expected)
-GPA: 3.96/4.0 (Rank: 1/25, top 4%)
+South China University of Technology, Guangzhou, China <br>
+B.E. in Computer Science, 2021~2025 (expected) <br>
+GPA: 3.96/4.0 (Rank: 1/25, top 4%) <br>
 
 
 News and Updates
