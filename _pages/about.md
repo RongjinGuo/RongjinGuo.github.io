@@ -24,8 +24,8 @@ Education
     B.E. in Computer Science, 2021~2025 (expected) <br>
     GPA: 3.96/4.0 (Rank: 1/25, top 4%) <br>
   </div>
-  <div style="text-align: right;">
-    <img src="../images/校徽.jpg" width=3 alt="图片" />
+  <div style="text-align: right; float: right;">
+    <img src="../images/校徽.jpg" width=30 alt="图片" />
   </div>
 </div>
 
