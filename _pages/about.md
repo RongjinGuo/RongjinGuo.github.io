@@ -14,7 +14,8 @@ I am advised by [Prof. Shengfeng He](http://www.shengfenghe.com/) of CVL from SC
 You can find my CV here: [XX's Curriculum Vitae](../assets/Curriculum_Vitae.pdf).
 
 
-**Education**
+Education
+=====
 South China University of Technology, Guangzhou, China
 B.E. in Computer Science, 2021~2025 (expected)
 GPA: 3.96/4.0 (Rank: 1/25, top 4%)
