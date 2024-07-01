@@ -25,7 +25,7 @@ Education
     GPA: 3.96/4.0 (Rank: 1/25, top 4%) <br>
   </div>
   <div style="text-align: right;">
-    <img src="../images/校徽.jpg" alt="图片" />
+    <img src="../images/校徽.jpg" width=3 alt="图片" />
   </div>
 </div>
 
