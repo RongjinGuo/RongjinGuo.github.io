@@ -8,7 +8,7 @@
 
 # Basic Site Settings
 locale                   : "en-US"
-title                    : "Rongjin Guo(郭荣锦)'s personal website | Homepage"
+title                    : "Rongjin(郭荣锦) | Homepage"
 title_separator          : "-"
 name                     : &name "Rongjin Guo"
 description              : &description "Rongjin Guo's peosonal website"
@@ -22,13 +22,13 @@ repository               : "RongjinGuo/RonjinGuo.github.io"
 author:
   # Biographic information
   avatar           : "profile.png"
-  name             : "Your Sidebar Name"
+  name             : "Rongjin Guo"
   pronouns         : # example: "she/her"  
-  bio              : "Short biography for the left-hand sidebar"
-  location         : "Earth"
-  employer         : "Red Brick University"
+  bio              : "Undergraduate in SCUT"
+  location         : "Guangzhou, Guangdong"
+  employer         : #"South China University of Technology"
   uri              : # URL
-  email            : "none@example.org" 
+  email            : "ethereal3529@gmail.com" 
 
   # Academic websites
   arxiv            : # URL - Update with the correct link to your profile
