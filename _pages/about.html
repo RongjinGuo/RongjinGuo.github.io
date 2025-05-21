@@ -71,13 +71,13 @@ redirect_from:
         list.innerHTML = "";
 
         rows.forEach(row => {
-          const [timestamp, title, link, comment] = row.c.map(c => c ? c.v : "");
+          const [timestamp, title, link, rate,comment] = row.c.map(c => c ? c.v : "");
           const paperDiv = document.createElement("div");
           paperDiv.className = "paper";
           paperDiv.innerHTML = `
             <a href="${link}" target="_blank">${title}</a>
+            <p>rate ${rate}</p>
             <p>💬 ${comment}</p>
-            <p style="font-size: small; color: #888">🕒 ${timestamp}</p>
           `;
           list.appendChild(paperDiv);
         });
