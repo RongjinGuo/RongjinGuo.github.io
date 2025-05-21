@@ -71,7 +71,6 @@ redirect_from:
         list.innerHTML = "";
 
         rows.forEach(row => {
-          // Get the raw cell values to preserve spaces in comments
           const timestamp = row.c[0] ? row.c[0].v : "";
           const title = row.c[1] ? row.c[1].v : "";
           const link = row.c[2] ? row.c[2].v : "";
@@ -79,11 +78,20 @@ redirect_from:
           const comment = row.c[4] ? row.c[4].v : "";
           
           const paperDiv = document.createElement("div");
-          paperDiv.className = "paper";
+          paperDiv.className = "talk-card-link";
           paperDiv.innerHTML = `
-            <a href="${link}" target="_blank">${title}</a>
-            <p>rate ${rate}</p>
-            <p>💬 ${comment}</p>
+            <a href="${link}" style="text-decoration: none; color: inherit; display: block;">
+              <div class="talk-card">
+                <div class="talk-content talk-content-full">
+                  <h3>${title}</h3>
+                  <p class="talk-date">推荐时间: ${timestamp} | 评分: ${rate}</p>
+                  <p class="talk-description">${comment}</p>
+                  <div class="talk-links">
+                    <a href="${link}" class="talk-link" target="_blank"><i class="fas fa-external-link-alt"></i> 查看论文</a>
+                  </div>
+                </div>
+              </div>
+            </a>
           `;
           list.appendChild(paperDiv);
         });
