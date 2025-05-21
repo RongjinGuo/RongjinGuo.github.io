@@ -26,25 +26,68 @@ redirect_from:
   </div>
 </div>
 
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>论文推荐墙</title>
+  <style>
+    body { font-family: sans-serif; padding: 2em; background-color: #f8f8f8; }
+    h1 { color: #333; }
+    .paper {
+      background: white;
+      border-radius: 10px;
+      padding: 1em;
+      margin-bottom: 1em;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .paper a {
+      font-weight: bold;
+      text-decoration: none;
+      color: #1a73e8;
+    }
+    .paper p {
+      margin: 0.5em 0 0 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>📚 用户推荐的论文</h1>
+  <div id="paper-list">加载中...</div>
+
+  <script>
+    const sheetId = "1VSLVuXZf1ru4Sr97GXXjHSbktnCp3vw_sUXOck3M5Y4";
+    const sheetName = "Form Responses 1";
+    const url = `https://docs.google.com/spreadsheets/d/${sheetId}/gviz/tq?tqx=out:json&sheet=${sheetName}`;
+
+    fetch(url)
+      .then(res => res.text())
+      .then(text => {
+        const json = JSON.parse(text.substr(47).slice(0, -2));
+        const rows = json.table.rows;
+
+        const list = document.getElementById("paper-list");
+        list.innerHTML = "";
+
+        rows.forEach(row => {
+          const [timestamp, title, link, comment] = row.c.map(c => c ? c.v : "");
+          const paperDiv = document.createElement("div");
+          paperDiv.className = "paper";
+          paperDiv.innerHTML = `
+            <a href="${link}" target="_blank">${title}</a>
+            <p>💬 ${comment}</p>
+            <p style="font-size: small; color: #888">🕒 ${timestamp}</p>
+          `;
+          list.appendChild(paperDiv);
+        });
+      })
+      .catch(err => {
+        document.getElementById("paper-list").innerText = "❌ 加载失败，请检查表格是否公开共享";
+        console.error("加载失败:", err);
+      });
+  </script>
+</body>
+</html>
 
 
-
-
-
-<form method="post" action="https://api.staticman.net/v3/entry/github/RongjinGuo/RongjinGuo.github.io/webhook">
-  <input type="hidden" name="options[reCaptcha][siteKey]" value="your-recaptcha-site-key">
-  <input type="hidden" name="options[slug]" value="about">
-  
-  <label for="name">名字：</label><br>
-  <input type="text" id="name" name="fields[name]"><br>
-  
-  <label for="email">邮箱：</label><br>
-  <input type="text" id="email" name="fields[email]"><br>
-  
-  <label for="comment">评论:</label><br>
-  <textarea id="comment" name="fields[comment]"></textarea><br>
-  
-  <!-- reCAPTCHA 部分 -->
-  
-  <button type="submit">提交</button>
-</form>
