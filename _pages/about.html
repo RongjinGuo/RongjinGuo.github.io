@@ -71,7 +71,13 @@ redirect_from:
         list.innerHTML = "";
 
         rows.forEach(row => {
-          const [timestamp, title, link, rate,comment] = row.c.map(c => c ? c.v : "");
+          // Get the raw cell values to preserve spaces in comments
+          const timestamp = row.c[0] ? row.c[0].v : "";
+          const title = row.c[1] ? row.c[1].v : "";
+          const link = row.c[2] ? row.c[2].v : "";
+          const rate = row.c[3] ? row.c[3].v : "";
+          const comment = row.c[4] ? row.c[4].v : "";
+          
           const paperDiv = document.createElement("div");
           paperDiv.className = "paper";
           paperDiv.innerHTML = `
