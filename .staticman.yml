@@ -1,5 +1,5 @@
 module.exports = {
-  apiURL: 'https://api.staticman.net/v3/entry/github/RongjinG/RongjinG.github.io',
+  apiURL: 'https://api.staticman.net/v3/entry/github/RongjinGuo/RongjinGuo.github.io',
   webHookPath: '/webhook',
   branch: 'master', // 或者你用于部署的分支名
   path: '_data/comments/{options.slug}.yml'
